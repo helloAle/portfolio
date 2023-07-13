@@ -304,6 +304,13 @@ body{
     z-index: 100;
 }
 
+/* scrow */
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 /* KEYFRAMES ANIMATION */
 @keyframes showRight{
     100%{
@@ -318,14 +325,19 @@ body{
 }
 
 /* about section */
+.line{
+    padding: 2px;
+    background: #ededed;
+}
 
 .about{
+    background: #230242;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    background: var(--second-bg-color);
+    /* background: var(--second-bg-color); */
     padding: 6rem;
 }
 
@@ -373,9 +385,35 @@ span{
     text-align: center;
 }
 
-.about-content h3{
+.about-content h3, a{
+    display: inline-block;
+    text-decoration: none;
     font-size: 2.6rem;
+    color: #ededed;
 }
+
+.about-content a{
+    color: #00abf0;
+}
+
+/* testers */
+
+.about-content h3 a:hover{
+    animation: rainbow 1s infinite;
+}
+
+@keyframes rainbow {
+    0%   { color: red; }
+    14%  { color: orange; }
+    28%  { color: yellow; }
+    43%  { color: green; }
+    57%  { color: blue; }
+    71%  { color: indigo; }
+    86%  { color: violet; }
+    100% { color: red; }
+  }
+
+/* teste' */
 
 .about-content p{
     font-size: 1.6rem;
@@ -389,5 +427,5 @@ span{
 }
 
 .btn-box.btns a::before{
-    background: #3d0471;
+    background: #230242 ;
 }

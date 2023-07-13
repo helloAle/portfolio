@@ -10,71 +10,70 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <!-- teste-->
 
-    <style>
-        /* Estilos para o popup */
-        .popup {
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          background-color: #3d0471;
-          padding: 20px;
-          border: 1px solid #ccc;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-          z-index: 9999;
-        }
-        
-        .popup p {
-          margin: 0;
-        }
-        
-        .popup__close {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-        }
-        
-        .overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.5);
-          z-index: 9998;
-        }
-        </style>
-        </head>
-        <body>
-        <div class="overlay" id="overlay"></div>
-        <div class="popup" id="popup">
-          <p>Esta página está em construção.</p>
-          <span class="popup__close" onclick="closePopup()"><i class='bx bxs-x-circle'></i></span>
-        </div>
-        
-        <script>
-        // Função para abrir o popup
-        function openPopup() {
-          document.getElementById("overlay").style.display = "block";
-          document.getElementById("popup").style.display = "block";
-        }
-        
-        // Função para fechar o popup
-        function closePopup() {
-          document.getElementById("overlay").style.display = "none";
-          document.getElementById("popup").style.display = "none";
-        }
-        
-        // Chama a função para abrir o popup quando a página é carregada
-        window.onload = function() {
-          openPopup();
-        };
-        </script>
-
-    <!--teste -->
+    <div>
+        <style>
+            /* Estilos para o popup */
+            .popup {
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background-color: #3d0471;
+              padding: 20px;
+              border: 1px solid #ccc;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+              z-index: 9999;
+            }
+            
+            .popup p {
+              margin: 0;
+            }
+            
+            .popup__close {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              cursor: pointer;
+            }
+            
+            .overlay {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.5);
+              z-index: 9998;
+            }
+            </style>
+            </head>
+            <body>
+            <div class="overlay" id="overlay"></div>
+            <div class="popup" id="popup">
+              <p>Esta página está em construção.</p>
+              <span class="popup__close" onclick="closePopup()"><i class='bx bxs-x-circle'></i></span>
+            </div>
+            
+            <script>
+            // Função para abrir o popup
+            function openPopup() {
+              document.getElementById("overlay").style.display = "block";
+              document.getElementById("popup").style.display = "block";
+            }
+            
+            // Função para fechar o popup
+            function closePopup() {
+              document.getElementById("overlay").style.display = "none";
+              document.getElementById("popup").style.display = "none";
+            }
+            
+            // Chama a função para abrir o popup quando a página é carregada
+            window.onload = function() {
+              openPopup();
+            };
+            </script>
+    </div>
 
     <header class="header">
         <a href="#" class="logo">@helloAle</a>
@@ -111,6 +110,7 @@
 
 
     <!-- About section -->
+    <section class="line"></section>
 
     <section class="about" id="about">
         <h2 class="heading">about <span>Me</span></h2>
@@ -121,7 +121,7 @@
         </div>
 
         <div class="about-content">
-            <h3>Frontend Developer!</h3>
+            <h3>Desenvolvedor <a href="#about">Frontend</a>!</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum consequatur suscipit ullam accusamus sapiente ipsam, tempora minus qui. Eligendi expedita a obcaecati labore architecto nam officiis doloremque veritatis eius. Esse quasi ducimus necessitatibus id mollitia nisi, aliquam cupiditate fuga quod dolores error eveniet iure odit sequi, tempora quisquam in modi.</p>
 
             <div class="btn-box btns">
@@ -129,7 +129,9 @@
             </div>
         </div>
      </section>
-     
+
      <script type="text/javascript" src="scrips.js"></script>
+     <!-- <script src="https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@1.0.4/dist/smoothscroll.min.js"></script> -->
+
 </body>
 </html>
