@@ -661,3 +661,107 @@ span{
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span{
     width: 90%;
 }
+
+/* contact */
+
+.contact{
+    padding: 5%;
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field{
+    position: relative;
+    width: 40%;
+    margin: .9rem -2rem;
+}
+
+.contact form .input-box .input-field input, .contact form .textarea-field textarea{
+    width: 80%;
+    height: 100%;
+    padding: .6rem;
+    font-size: 1.6rem;
+    color: #ededed;
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid #00abf0
+}
+
+.contact form .textarea-field textarea{
+    height: 15rem;
+    width: 66%;
+}
+
+
+/* botao */
+
+.contact form button{
+    margin-top: 1rem;
+    padding: 1rem;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #3d0471;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.contact form button:hover{
+    color: #00abf0
+}
+
+.contact form button:nth-child(2){
+    background: transparent;
+    color: #00abf0;
+}
+
+.contact form button:nth-child(2):hover{
+    color: #3d0471;
+}
+
+.contact form button:nth-child(2)::before{
+    background: #00abf0;
+}
+
+.contact form button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #3d0471;
+    z-index: -1;
+    transition: .4s;
+}
+
+.contact form button:hover::before{
+    width: 100%;
+}
+
+/* botao */
