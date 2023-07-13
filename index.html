@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <!-- <div>
+    <div>
         <style>
             /* Estilos para o popup */
             .popup {
@@ -21,13 +21,22 @@
               transform: translate(-50%, -50%);
               background-color: #3d0471;
               padding: 20px;
-              border: 1px solid #ccc;
+              border: 1px solid transparent;
+              border-radius: .6rem;
               box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
               z-index: 9999;
+              transition: .5s;
+            }
+            .popup:hover{
+                background: #6700c7;
             }
             
             .popup p {
-              margin: 0;
+              margin: 1rem;
+            }
+
+            i{
+                font-size: 1.5rem;
             }
             
             .popup__close {
@@ -73,13 +82,13 @@
               openPopup();
             };
             </script>
-    </div> -->
+    </div>
 
     <header class="header">
         <a href="#" class="logo">@helloAle</a>
 
         <nav class="navbar">
-            <a href="#" class="active">Home</a>
+            <a href="#home" class="active">Home</a>
             <a href="#about">Sobre</a>
             <a href="#education">vo mudar isso aqui</a>
             <a href="#skills">Skills</a>
@@ -87,7 +96,7 @@
         </nav>
     </header>
 
-    <section class="home">
+    <section class="home" id="home">
         <div class="home-content">
             <h1>Olá, Alexandre aqui!</h1>
             <h3>Frontend Developer</h3>
@@ -281,6 +290,8 @@
         </div>
      </section>
 
+     <section class="line2"></section>
+
      <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
@@ -318,7 +329,7 @@
         </form>
      </section>
 
-     <script type="text/javascript" src="scrips.js"></script>
+     <script type="text/javascript" src="script.js"></script>
      <!-- <script src="https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@1.0.4/dist/smoothscroll.min.js"></script> -->
 
 </body>
