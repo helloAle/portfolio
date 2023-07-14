@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome,opera,safari">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio pessoal</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="scrow.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="letra-a.png">
+    <title>Meu Portfolio</title>
 </head>
 <body>
 
@@ -30,13 +31,14 @@
             .popup:hover{
                 background: #6700c7;
             }
-            
-            .popup p {
-              margin: 1rem;
-            }
 
             i{
                 font-size: 1.5rem;
+            }
+
+            p i{
+                font-size: 2rem;
+                padding: 1rem;
             }
             
             .popup__close {
@@ -60,7 +62,7 @@
             <body>
             <div class="overlay" id="overlay"></div>
             <div class="popup" id="popup">
-              <p>Esta página está em construção.</p>
+              <p><i class='bx bx-hard-hat'></i>Esta página está em construção.</p>
               <span class="popup__close" onclick="closePopup()"><i class='bx bxs-x-circle'></i></span>
             </div>
             
@@ -90,7 +92,7 @@
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">Sobre</a>
-            <a href="#education">vo mudar isso aqui</a>
+            <a href="#education">Jornada</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contatos</a>
         </nav>
@@ -131,10 +133,10 @@
 
         <div class="about-content">
             <h3>Desenvolvedor <a href="#about">Frontend</a>!</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus molestias harum, sint quia distinctio exercitationem magni nesciunt fuga architecto quis? Adipisci, vero qui. Facilis optio voluptas tempora assumenda deleniti labore mollitia officia. Nulla iusto praesentium sunt itaque eligendi accusamus.</p>
+            <p>Sou o Alexandre, estudante de Engenharia de Software com experiência em social media e desenvolvimento. Tenho habilidades em comunicação, senso crítico e afinidade com UI. Participo da criação de um projeto de software para redução do desperdício alimentar e busco equilibrar minha paixão por viagens e esportes com uma carreira em tecnologia.</p>
 
             <div class="btn-box btns">
-                <a href="#education" class="btn">Read More</a>
+                <a href="#education" class="btn">Saiba mais</a>
             </div>
         </div>
      </section>
@@ -145,7 +147,7 @@
      <!-- education section design here -->
 
      <section class="education" id="education">
-        <h2 class="heading">mudar <span>isso</span></h2>
+        <h2 class="heading">Minha <span>Jornada</span></h2>
 
         <div class="education-row">
             <div class="education-column">
@@ -154,27 +156,26 @@
                 <div class="education-box">
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class='bx bxs-calendar' ></i> 2021 - 2024</div>
-                            <h3>Master Degree - University</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo quas tenetur, veniam suscipit quod in blanditiis. Placeat, quidem et?</p>
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2021 - Agora</div>
+                            <h3>Engenharia de software - UniEvangelica</h3>
+                            <p>Em 2021, iniciei meus estudos em Engenharia de Software na UniEvangelica, onde tenho a oportunidade contínua de expandir meus conhecimentos em áreas como gestão de projetos, desenvolvimento e muito mais.</p>
                         </div>
                     </div>
 
 
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class='bx bxs-calendar' ></i> 2021 - 202X</div>
-                            <h3>Master Degree - University</h3>
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2022</div>
+                            <h3>API Restful - Udemy</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo quas tenetur, veniam suscipit quod in blanditiis. Placeat, quidem et?</p>
                         </div>
                     </div>
 
-
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class='bx bxs-calendar' ></i> 2021 - 202X</div>
-                            <h3>Master Degree - University</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo quas tenetur, veniam suscipit quod in blanditiis. Placeat, quidem et?</p>
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2018</div>
+                            <h3>Design Grafico - Curso</h3>
+                            <p>Durante meu percurso acadêmico, busquei aprimorar minhas habilidades em Design Gráfico e Edição de Vídeo, adquirindo conhecimentos técnicos avançados. Minha dedicação resultou em uma base sólida para projetos profissionais nessa área.</p>
                         </div>
                     </div>
                     
@@ -185,29 +186,28 @@
                 <h3 class="title">Experiência</h3>
 
                 <div class="education-box">
+
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class='bx bxs-calendar' ></i> 2021 - 202X</div>
-                            <h3>Master Degree - University</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo quas tenetur, veniam suscipit quod in blanditiis. Placeat, quidem et?</p>
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2022</div>
+                            <h3>Estágio Dev backend - Fasters</h3>
+                            <p>Durante meu estágio na empresa Fasters, tive a oportunidade de aprimorar meus conhecimentos em desenvolvimento backend e banco de dados. Colaborei no desenvolvimento de soluções eficientes e aprendi a lidar com desafios mais complexos.</p>
                         </div>
                     </div>
 
-
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class='bx bxs-calendar' ></i> 2021 - 202X</div>
-                            <h3>Master Degree - University</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo quas tenetur, veniam suscipit quod in blanditiis. Placeat, quidem et?</p>
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2022 - 2023</div>
+                            <h3>Product Designer - FTT</h3>
+                            <p>Fui responsavel por criar interfaces intuitivas para os projetos em que estive presente, alinhando as necessidades dos clientes com boas soluções de design.</p>
                         </div>
                     </div>
 
-
                     <div class="education-content">
                         <div class="content">
-                            <div class="year"><i class='bx bxs-calendar' ></i> 2021 - 202X</div>
-                            <h3>Master Degree - University</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo quas tenetur, veniam suscipit quod in blanditiis. Placeat, quidem et?</p>
+                            <div class="year"><i class='bx bxs-calendar' ></i> 2021 - 2022</div>
+                            <h3>Analista de midias - FTT</h3>
+                            <p>Como analista de midias sociais na FTT, atuei na criação de publicações, resultando em um bom engajamento, impulsionando o alcance e visibilidade da empresa.</p>
                         </div>
                     </div>
                     
