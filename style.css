@@ -1,4 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/satoshi');
+::selection {
+    background-color: #ededed; /* Define a cor de fundo ao selecionar */
+    color: #3d0471; /* Define a cor do texto ao selecionar */
+}
+
 
 *{
     margin: 0;
@@ -568,7 +573,7 @@ span{
     min-height: auto;
     padding-bottom: 7rem;
     /* background: #230242; */
-  background: linear-gradient(to bottom, #230242, #1b0232, #130124);
+    background: linear-gradient(to bottom, #230242, #1b0232, #130124);
 }
 
 .projects h2{
@@ -704,104 +709,78 @@ span{
 
 /* contact */
 
-.contact{
-    padding: 5%;
+.contact {
+    background-image: url('../img/pintura.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5% 20%;
     min-height: auto;
     padding-bottom: 7rem;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7); /* Ajuste o valor do último parâmetro (0.5) para alterar a intensidade da cor de fundo */
+  
 }
 
-.contact form{
-    max-width: 70rem;
-    margin: 0 auto;
-    text-align: center;
+.contact h2 span{
+    color: #8b3dd3;
 }
 
-.contact form .input-box{
-    position: relative;
+.foot-sci{
+    position: absolute;
+    width: 170px;
     display: flex;
-    justify-content: center;
-    /* justify-content: space-between; */
-    flex-wrap: wrap;
+    justify-content: space-between;
+    right: 44%;
 }
-
-.contact form .input-box .input-field{
-    position: relative;
-    width: 40%;
-    margin: .9rem -2rem;
-}
-
-.contact form .input-box .input-field input, .contact form .textarea-field textarea{
-    width: 80%;
-    height: 100%;
-    padding: .6rem;
-    font-size: 1.6rem;
-    color: #ededed;
-    background: transparent;
-    border-radius: .6rem;
-    border: .2rem solid #00abf0
-}
-
-.contact form .textarea-field textarea{
-    height: 15rem;
-    width: 66%;
-}
-
-
-/* botao */
-
-.contact form button{
-    margin-top: 1rem;
-    padding: 1rem;
+ 
+.foot-sci a{
     position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 100%;
-    background: #00abf0;
-    border: 2px solid #00abf0;
-    border-radius: 8px;
-    font-size: 19px;
-    color: #3d0471;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #ededed;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ededed;
     text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
     overflow: hidden;
     transition: .4s;
+    z-index: 1;
 }
 
-.contact form button:hover{
-    color: #00abf0
+.foot-sci a:hover{
+    color: #873003;
 }
 
-.contact form button:nth-child(2){
-    background: transparent;
-    color: #00abf0;
-}
-
-.contact form button:nth-child(2):hover{
-    color: #3d0471;
-}
-
-.contact form button:nth-child(2)::before{
-    background: #00abf0;
-}
-
-.contact form button::before{
+.foot-sci a::before{
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background: #3d0471;
+    background: #ededed;
     z-index: -1;
     transition: .4s;
 }
 
-.contact form button:hover::before{
+.foot-sci a:hover::before{
     width: 100%;
 }
 
-/* botao */
+
+/* //////////////////////////////////////////////////////////////// */
+
+.education-box .planta {
+    padding: 5%;
+    position: absolute;
+    left: 0;
+}
+  
+.education-box img{
+    width: 70%;
+}
