@@ -463,7 +463,6 @@ span{
 /* education */
 
 .education{
-    margin: 0 0 0 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -473,6 +472,7 @@ span{
 }
 
 .education .education-row{
+    margin: 0 0 0 3rem;
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
@@ -566,7 +566,8 @@ span{
     padding: 5% 5%;
     min-height: auto;
     padding-bottom: 7rem;
-    background: #230242
+    /* background: #230242; */
+  background: linear-gradient(to bottom, #230242, #1b0232, #160229);
 }
 
 .projects h2{
