@@ -710,7 +710,7 @@ span{
 /* contact */
 
 .contact {
-    background-image: url('../img/pintura.jpg');
+    background-image: url('https://raw.githubusercontent.com/helloAle/portfolio/main/img/pintura.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
