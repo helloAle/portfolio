@@ -4,6 +4,10 @@
     color: #3d0471; /* Define a cor do texto ao selecionar */
 }
 
+a{
+    text-decoration: none;
+    outline: none;
+}
 
 *{
     margin: 0;
@@ -415,7 +419,7 @@ span{
     text-align: center;
 }
 
-.about-content h3, a{
+.about-content h3, .about-content a{
     display: inline-block;
     text-decoration: none;
     font-size: 2.6rem;

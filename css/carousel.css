@@ -34,24 +34,39 @@
   width: 100%;
 }
 
-.conteudo{
+a{
+  color: inherit;
+  text-decoration: none;
+  outline: 0;
+}
+
+a .conteudo{
   width: 100%;
   padding: 10px;
 }
 
-.conteudo h1{
+a .conteudo h1{
   font-size: 25px;
   margin: 10px 0;
 }
 
-.project .conteudo p{
+a .project .conteudo p{
   font-size: 15px;
   color: #474747;
   margin: 10px 0;
 }
 
-.conteudo span{
+a .conteudo span{
   font-size: 10px;
   color:#9a9a9aaa;
   margin: 10px 0;
 }
+
+/* a{
+  text-decoration: none;
+  outline: none;
+} */
+
+
+
+/* ////// */
