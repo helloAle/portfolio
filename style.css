@@ -790,7 +790,7 @@ span{
     width: 70%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     #planta, .home-sci {
       display: none;
     }
