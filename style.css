@@ -788,3 +788,10 @@ span{
 .education-box img{
     width: 70%;
 }
+
+@media screen and (max-width: 768px) {
+    #planta {
+      display: none;
+    }
+  }
+  
