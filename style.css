@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/satoshi');
+
 ::selection {
     background-color: #ededed; /* Define a cor de fundo ao selecionar */
     color: #3d0471; /* Define a cor do texto ao selecionar */
@@ -9,7 +10,7 @@ a{
     outline: none;
 }
 
-*{
+html, header, *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,7 +38,7 @@ body{
 }
 
 .header.hide {
-    top: -100px; /* Altura do header */
+    top: -100px;
   }
 
 header nav a.active {
