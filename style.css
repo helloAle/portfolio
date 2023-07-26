@@ -790,10 +790,17 @@ span{
     width: 70%;
 }
 
+#container-cell {
+    display: none;
+}
+
 @media screen and (max-width: 800px) {
-    #planta, #home-sci {
+    #planta, #home-sci, #container{
       display: none;
     }
-
+    #container-cell{
+        width: 95%;
+        display: block;
+    }
   }
   
