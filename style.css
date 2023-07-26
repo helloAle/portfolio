@@ -66,6 +66,10 @@ header nav a.active {
     animation-delay: .4s;
 }
 
+.navbar-toggler{
+    background: #8b3dd3;
+}
+
 .navbar a{
     font-size: 18px;
     color: #ededed;
@@ -799,7 +803,7 @@ span{
       display: none;
     }
     #container-cell{
-        width: 95%;
+        width: 98%;
         display: block;
     }
   }
