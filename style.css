@@ -806,5 +806,15 @@ span{
         width: 98%;
         display: block;
     }
+    #foot-sci{
+        left: 28%;
+    }
+    #home{
+        background: #3d0471;
+        padding: 0 4%;
+    }
+    #btn-boxhome{
+        width: 320px;
+    }
   }
   
