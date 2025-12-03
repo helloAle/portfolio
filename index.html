@@ -1,306 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome,opera,safari">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./css/scrow.css">
-    <link rel="stylesheet" href="./css/carousel.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/png" href="./img/vite.svg">
-    <title>Meu Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Página em Reforma</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: white;
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      z-index: 2;
+    }
+
+    img {
+      width: 220px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .counter {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .ball {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: black;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .ball:active {
+      transform: scale(0.9);
+    }
+  </style>
 </head>
 <body>
 
-    <header class="header" id="header">
+  <div class="container">
+    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWQweDJkZHQxMXNvaDU3eTBwZHRmNGVzcmNnYzl4c2JheGQ4MDVlOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/P8ef3Dkynk0xLx1h1T/giphy.gif">
+    <h1 id="title">Página em reforma</h1>
+    <p id="text">Clique aqui pra mudar a mensagem 👈</p>
+    <div class="counter">Cliques: <span id="count">0</span></div>
+  </div>
 
-        <a href="#" class="logo">@helloAle</a>
-        <nav class="navbar navbar-expand-lg" id="navbar">
+  <div class="ball" id="ball"></div>
 
-            <div class="container-fluid">
+  <script>
+    const messages = [
+      "Volto em breve 👀",
+      "Ainda estou construindo isso aqui...",
+      "Vai ficar irado, confia 😎",
+      "Curioso? Eu também!",
+      "Toca na bolinha aí 👉"
+    ];
 
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a href="#home" class="active">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#about">Sobre</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#education">Jornada</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#projects">Projetos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#contact">Contato</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-    </header>
+    let index = 0;
+    let clicks = 0;
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1>Olá, Alexandre aqui!</h1>
-            <h3>Desenvolvedor Frontend</h3>
-            <p>Sou um desenvolvedor frontend de Goiás, estudante de Engenharia de Software na UniEvangelica. Além de me dedicar ao UI, estou aprofundando meus conhecimentos em desenvolvimento Backend.</p>
-            <div class="btn-box" id="btn-boxhome">
-                <a href="#projects">Portfolio</a>
-                <a href="#about">Sobre</a>
-            </div>
-        </div>
+    const text = document.getElementById("text");
+    const count = document.getElementById("count");
+    const ball = document.getElementById("ball");
 
-        <div class="home-sci" id="home-sci">
-            <a href="https://github.com/helloAle" ><i class='bx bxl-github' ></i></a>
-            <a href="mailto:ale.oliveira.deet@gmail.com"><i class='bx bxl-gmail'></i></a>
-            <a href="https://www.linkedin.com/in/oliveirale/"><i class='bx bxl-linkedin' ></i></a>
-        </div>
+    text.addEventListener("click", () => {
+      index = (index + 1) % messages.length;
+      text.innerText = messages[index];
+      clicks++;
+      count.innerText = clicks;
+    });
 
-        <span class="home-imgHover"></span>
+    function moveBall() {
+      const x = Math.random() * (window.innerWidth - 50);
+      const y = Math.random() * (window.innerHeight - 50);
+      ball.style.left = x + "px";
+      ball.style.top = y + "px";
+    }
 
-    </section>
+    ball.addEventListener("click", moveBall);
+    moveBall();
+  </script>
 
-
-    <!-- About section -->
-    <section class="line"></section>
-
-    <section class="about" id="about">
-        <h2 class="heading">Sobre <span>Mim</span></h2>
-
-        <div class="about-img">
-            <img src="./img/me6.jpeg" alt="">
-            <span class="circle-spin"></span>
-        </div>
-
-        <div class="about-content">
-            <h3>Desenvolvedor <a href="#about">Frontend</a>!</h3>
-            <p>Sou o Alexandre, estudante de Engenharia de Software com experiência em social media e Desenvolvimento. Tenho interesse em me aprimorar na área de tecnologia, explorando novas tecnologias e projetos desafiadores. Sempre busco aplicar meu conhecimento de forma inovadora. Além disso, tenho interesse em me aprofundar em Inteligência Artificial.</p>
-
-            <div class="btn-box btns" id="btn-box btns">
-                <a href="#education" class="btn">Saiba mais</a>
-            </div>
-        </div>
-     </section>
-
-     
-    <section class="line2"></section>
-
-     <!-- education section design here -->
-
-     <section class="education" id="education">
-        <h2 class="heading">Minha <span>Jornada</span></h2>
-
-        <div class="education-row">
-            <div class="education-column">
-                <h3 class="title">Educação</h3>
-
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar' ></i> 2021 - Agora</div>
-                            <h3>Engenharia de software - UniEvangelica</h3>
-                            <p>Em 2021, iniciei meus estudos em Engenharia de Software na UniEvangelica, onde tenho a oportunidade contínua de expandir meus conhecimentos em áreas como gestão de projetos, desenvolvimento e muito mais.</p>
-                        </div>
-                    </div>
-
-                    <!-- <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar' ></i> 2022</div>
-                            <h3>API Restful - Udemy</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo quas tenetur, veniam suscipit quod in blanditiis. Placeat, quidem et?</p>
-                        </div>
-                    </div> -->
-
-                    <!-- <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar' ></i> 2018</div>
-                            <h3>Design Grafico - Curso</h3>
-                            <p>Durante meu percurso acadêmico, busquei aprimorar minhas habilidades em Design Gráfico e Edição de Vídeo, adquirindo conhecimentos técnicos avançados. Minha dedicação resultou em uma base sólida para projetos profissionais nessa área.</p>
-                        </div>
-                    </div> -->
-                    
-                </div>
-            </div>
-
-            <div class="education-column">
-                <h3 class="title">Experiência</h3>
-
-                <div class="education-box">
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar' ></i> 2022</div>
-                            <h3>Estágio Dev backend - Fasters</h3>
-                            <p>Durante meu estágio na empresa Fasters, tive a oportunidade de aprimorar meus conhecimentos em desenvolvimento backend e banco de dados. Colaborei no desenvolvimento de soluções eficientes e aprendi a lidar com desafios mais complexos.</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar' ></i> 2022 - 2023</div>
-                            <h3>Product Designer - FTT</h3>
-                            <p>Fui responsavel por criar interfaces intuitivas para os projetos em que estive presente, alinhando as necessidades dos clientes com boas soluções de design.</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar' ></i> 2021 - 2022</div>
-                            <h3>Analista de midias - FTT</h3>
-                            <p>Como analista de midias sociais na FTT, atuei na criação de publicações, resultando em um bom engajamento, impulsionando o alcance e visibilidade da empresa.</p>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-
-
-        </div>
-     </section>
-     
-    <section class="line"></section>
-
-     <section class="projects" id="projects">
-        <h2 class="heading">Meus <span>Projetos</span></h2>
-
-        <div class="container" id="container">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <a href="https://helloale.github.io/website/#" class="">
-                            <img src="./img/website.PNG" alt="">
-                            <div class="conteudo">
-                                <h1>Tela de login</h1>
-                                <p>Uma estética elegante e moderna para uma tela de login, adiciona um toque visualmente agradável ao seu processo de login.</p>
-                                <span>06, Apr 2023</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="https://helloale.github.io/tela_login-blur/" class="">
-                            <img src="./img/login_blur.PNG" alt="">
-                            <div class="conteudo">
-                                <h1>Login Blur</h1>
-                                <p>Uma estética dinâmica e vibrante dá vida à nossa tela interativa. Desfrute de uma experiência colorida enquanto realiza seu processo de login com facilidade e estilo.</p>
-                                <span>05, Apr 2023</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="https://helloale.github.io/random_number_generator/" class="">
-                            <img src="./img/random_number.PNG" alt="">
-                            <div class="conteudo">
-                                <h1>Gerador de Numero Aleatorio</h1>
-                                <p>Gerador de até 15 números aleatórios: números únicos e imprevisíveis em instantes.</p>
-                                <span>08, Apr 2023</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="https://helloale.github.io/Voyage_agency/#" class="">
-                            <img src="./img/espace_voyage.PNG" alt="">
-                            <div class="conteudo">
-                                <h1>Espace Voyage</h1>
-                                <p>Uma tela em francês com uma estética clean e confortável, projetada para lhe ajudar a explorar e planejar suas futuras viagens com facilidade.</p>
-                                <span>09, Apr 2023</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="https://helloale.github.io/barbearia-Alura/" class="">
-                            <img src="./img/barbearia.PNG" alt="">
-                            <div class="conteudo">
-                                <h1>Barbearia Alura</h1>
-                                <p>Durante meu curso de front-end na Alura, desenvolvi meu primeiro projeto web: um site para uma barbearia fictícia. Explore o design e as funcionalidades deste projeto!</p>
-                                <span>08, Sep 2021</span>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-            <div class="planta" id="planta"><img src="./img/planta.jpg" alt="vazo de planta"></div>
-        </div>
-
-        <div class="container-cell" id="container-cell">
-            <div id="carouselExampleCaptions" class="carousel slide">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="./img/website.PNG" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./img/login_blur.PNG" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./img/random_number.PNG" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./img/espace_voyage.PNG" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./img/barbearia.PNG" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-     </section>
-
-     <section class="line2"></section>
-
-     <section class="contact" id="contact">
-        <h2 class="heading">Entre em <span>Contato</span></h2>
-
-        <div class="foot-sci" id="foot-sci">
-            <a href="https://www.instagram.com/szxand/" ><i class='bx bxl-instagram'></i></a>
-            <a href="mailto:ale.oliveira.deet@gmail.com"><i class='bx bxl-gmail'></i></a>
-            <a href="https://www.linkedin.com/in/oliveirale/"><i class='bx bxl-linkedin' ></i></a>
-        </div>
-     </section>
-
-     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-     <script type="text/javascript" src="./js/script.js"></script>
-
-     <script type="text/javascript" src="./js/carousel.js"></script>
-     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
