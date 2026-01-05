@@ -1,105 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Página em Reforma</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: white;
-      font-family: Arial, Helvetica, sans-serif;
-      color: black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site em Reforma</title>
 
-    .container {
-      text-align: center;
-      z-index: 2;
-    }
-
-    img {
-      width: 220px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .counter {
-      margin-top: 10px;
-      font-size: 14px;
-    }
-
-    .ball {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background: black;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    .ball:active {
-      transform: scale(0.9);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Background Matrix -->
+  <div class="matrix"></div>
 
-  <div class="container">
-    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWQweDJkZHQxMXNvaDU3eTBwZHRmNGVzcmNnYzl4c2JheGQ4MDVlOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/P8ef3Dkynk0xLx1h1T/giphy.gif">
-    <h1 id="title">Página em reforma</h1>
-    <p id="text">Clique aqui pra mudar a mensagem 👈</p>
-    <div class="counter">Cliques: <span id="count">0</span></div>
-  </div>
+  <!-- Conteúdo Central -->
+  <main class="center">
+    <h1>Estamos em reforma</h1>
+  </main>
 
-  <div class="ball" id="ball"></div>
-
-  <script>
-    const messages = [
-      "Volto em breve 👀",
-      "Ainda estou construindo isso aqui...",
-      "Vai ficar irado, confia 😎",
-      "Curioso? Eu também!",
-      "Toca na bolinha aí 👉"
-    ];
-
-    let index = 0;
-    let clicks = 0;
-
-    const text = document.getElementById("text");
-    const count = document.getElementById("count");
-    const ball = document.getElementById("ball");
-
-    text.addEventListener("click", () => {
-      index = (index + 1) % messages.length;
-      text.innerText = messages[index];
-      clicks++;
-      count.innerText = clicks;
-    });
-
-    function moveBall() {
-      const x = Math.random() * (window.innerWidth - 50);
-      const y = Math.random() * (window.innerHeight - 50);
-      ball.style.left = x + "px";
-      ball.style.top = y + "px";
-    }
-
-    ball.addEventListener("click", moveBall);
-    moveBall();
-  </script>
-
+  <script src="matrix.js"></script>
 </body>
 </html>
