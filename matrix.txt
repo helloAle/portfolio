@@ -1,0 +1,46 @@
+const matrix = document.querySelector('.matrix');
+
+const receitas = [
+  'FEIJOADA',
+  'PÃO DE QUEIJO',
+  'MOQUECA',
+  'BRIGADEIRO',
+  'ACARAJÉ',
+  'COXINHA',
+  'TAPIOCA',
+  'VATAPÁ'
+];
+
+// Converte palavra em escrita vertical japonesa
+function verticalize(text) {
+  return text.replace(/\s/g, '').split('').join('\n');
+}
+
+function createColumn() {
+  const column = document.createElement('div');
+  column.className = 'column';
+
+  const receita =
+    receitas[Math.floor(Math.random() * receitas.length)];
+
+  column.textContent = verticalize(receita);
+
+  const size = Math.random() * 6 + 12;
+  column.style.fontSize = `${size}px`;
+
+  column.style.left = `${Math.random() * 100}vw`;
+
+  const duration = Math.random() * 6 + 6;
+  column.style.animationDuration = `${duration}s`;
+
+  column.style.opacity = Math.random() * 0.5 + 0.2;
+
+  matrix.appendChild(column);
+
+  setTimeout(() => {
+    column.remove();
+  }, duration * 1000);
+}
+
+// Geração contínua
+setInterval(createColumn, 300);
