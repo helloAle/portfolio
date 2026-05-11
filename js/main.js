@@ -53,26 +53,9 @@ document
 
     const frames = [
 
-      "Site em reforma  91%.",
-      "Site em reforma  91%..",
-      "Site em reforma  91%...",
-
-      "Site em reforma  92%.",
-      "Site em reforma  92%..",
-      "Site em reforma  92%...",
-
-      "Site em reforma  93%.",
-      "Site em reforma  93%..",
-      "Site em reforma  93%...",
-
-      "Site em reforma  92%...",
-      "Site em reforma  92%..",
-      "Site em reforma  92%.",
-
-      "Site em reforma  91%...",
-      "Site em reforma  91%..",
-      "Site em reforma  91%.",
-
+      "Site em reforma.",
+      "Site em reforma..",
+      "Site em reforma...",
     ];
 
     let frameIndex = 0;
