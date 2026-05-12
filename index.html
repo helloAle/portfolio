@@ -2,43 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<<<<<<< HEAD
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>@helloAlle ? Portfolio</title>
+  <title>helloAlle - Portfolio</title>
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Schoolbell&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/style.css">
-=======
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Site em Reforma</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
->>>>>>> b346a4d7f679d059582e3f572ea5ed4c8a4106ba
+  <!-- Custom -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/about.css">
+  <link rel="stylesheet" href="./css/projects.css">
+  <link rel="stylesheet" href="contact.css">
+
+  <!-- icones -->
 </head>
 
-<body>
-  <!-- Background Matrix -->
-  <div class="matrix"></div>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
 
-<<<<<<< HEAD
-  <!-- NAV -->
-  <nav>
-    <a href="#home" class="nav-logo">@helloAlle</a>
+  <!-- ???????????????????????????????????????????
+       NAV
+  ??????????????????????????????????????????? -->
+  <nav id="mainNav" class="navbar navbar-expand-md fixed-top alle-nav">
+    <div class="container-fluid px-4 px-md-5">
 
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#about">Journey</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+      <a class="navbar-brand alle-brand" href="#home">@helloAlle</a>
+
+      <button class="navbar-toggler alle-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-md-3">
+          <li class="nav-item"><a class="nav-link" href="#about-title">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="home">
+  <!-- ???????????????????????????????????????????
+       HERO
+  ??????????????????????????????????????????? -->
+  <section id="home" class="alle-hero d-flex flex-column justify-content-center align-items-center text-center">
+
     <div class="hero-stage">
 
       <div class="hero-row-wrap">
@@ -51,9 +66,7 @@
 
         <div class="hero-row hero-row-b">
           <span class="hero-word word-left-b">FRONT END</span>
-
           <span class="pipe-placeholder"></span>
-
           <span class="hero-word word-right-b">DEVELOPER</span>
         </div>
 
@@ -61,208 +74,207 @@
 
     </div>
 
-    <div class="hero-subtitle-wrapper">
+    <div class="hero-subtitle-wrapper mt-4">
       <p class="hero-subtitle">
-        ?
-        <span id="swap-text">
-          building interfaces that feel alive
-        </span>
+        <span id="swap-text">building interfaces that feel alive</span>
       </p>
     </div>
+
+    <a href="#about" class="hero-scroll-hint mt-5" aria-label="Scroll down">icone pra baixo</i></a>
+
   </section>
 
-  <!-- ABOUT DIVIDER -->
-  <div class="section-divider">
+  <!-- ???????????????????????????????????????????
+       ABOUT
+  ??????????????????????????????????????????? -->
+  <div class="section-divider container-fluid px-4 px-md-5">
     <a href="#home" class="back-top">?</a>
-
-    <h2>About</h2>
-
+    <h2 id="about-title">About</h2>
     <div class="divider-line"></div>
   </div>
 
-  <!-- ABOUT -->
-  <section id="about">
+  <section id="about" class="alle-section">
+    <div class="container-xl px-4 px-md-5">
 
-    <div class="about-grid">
+      <div class="row g-5 align-items-start mt-2">
 
-      <div class="about-left">
+        <!-- Left col -->
+        <div class="col-md-5">
+          <p class="lead fw-normal mb-3">Some phrase about working well.</p>
 
-        <p>Some phrase about working well.</p>
+          <p class="bio">
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam sunt rem reprehenderit nam possimus mollitia quo tempore facilis voluptatem similique.
+          </p>
 
-        <p class="bio">
-          My text about me + experience and all the things I know,
-          pipipipi popopopo.
-          I care about details, craft, and shipping things that matter.
-        </p>
+          <div class="d-flex gap-3 mt-4">
+            <a href="./assets/Curriculo.pdf" class="btn-outline">Resume</a>
+            <a href="https://github.com/helloAle" target="_blank" class="btn-outline">Github</a>
+            <a href="https://www.linkedin.com/in/oliveirale/" target="_blank" class="btn-outline">LinkedIn</a>
+          </div>
+        </div>
 
-        <div class="about-buttons">
-          <a href="#" class="btn-outline">R?sum?</a>
-          <a href="https://github.com" target="_blank" class="btn-outline">
-            Github
-          </a>
+        <!-- Right col ? timeline -->
+        <div class="col-md-7">
+          <div class="experience-list">
+
+            <div class="exp-item reveal">
+              <div class="exp-dot"></div>
+              <div class="exp-content">
+                <div class="exp-date">2024 - Present</div>
+                <div class="exp-title">Administrative Assistance Advisor</div>
+                <div class="exp-desc">
+                  Focused on process automation, structured spreadsheets, and optimization of administrative workflows, ensuring organization, traceability, and efficient internal control.
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-item reveal">
+              <div class="exp-dot"></div>
+              <div class="exp-content">
+                <div class="exp-date">2022</div>
+                <div class="exp-title">Back-end Development Intern</div>
+                <div class="exp-desc">
+                  Worked with PostgreSQL and TypeScript in database modeling and back-end integration, contributing to organized and efficient application communication.
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-item reveal">
+              <div class="exp-dot"></div>
+              <div class="exp-content">
+                <div class="exp-date">2021 - 2022</div>
+                <div class="exp-title">Front-end Trainee Developer</div>
+                <div class="exp-desc">
+                  Contributed to the development and improvement of responsive web interfaces for the Unisecurity system, focusing on usability, performance, and user experience.
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
       </div>
-
-      <div class="about-right">
-
-        <div class="experience-list">
-
-          <div class="exp-item">
-            <div class="exp-dot"></div>
-
-            <div class="exp-content">
-              <div class="exp-date">2022 ? Present</div>
-
-              <div class="exp-title">
-                Senior Frontend Developer
-              </div>
-
-              <div class="exp-desc">
-                Led the development of design systems and UI architecture
-                for a SaaS platform used by 50k+ users.
-              </div>
-            </div>
-          </div>
-
-          <div class="exp-item">
-            <div class="exp-dot"></div>
-
-            <div class="exp-content">
-              <div class="exp-date">2020 ? 2022</div>
-
-              <div class="exp-title">
-                Software Engineer
-              </div>
-
-              <div class="exp-desc">
-                Full-stack development with a focus on performance
-                and accessibility.
-              </div>
-            </div>
-          </div>
-
-          <div class="exp-item">
-            <div class="exp-dot"></div>
-
-            <div class="exp-content">
-              <div class="exp-date">2018 ? 2020</div>
-
-              <div class="exp-title">
-                Junior Developer
-              </div>
-
-              <div class="exp-desc">
-                Started building things that work.
-                Learned how to make them beautiful too.
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
     </div>
-
   </section>
 
-  <!-- PROJECTS DIVIDER -->
-  <div class="section-divider">
+ <!-- PROJECTS -->
+  <div class="section-divider container-fluid px-4 px-md-5">
     <a href="#home" class="back-top">?</a>
-
     <h2>Projects</h2>
-
     <div class="divider-line"></div>
   </div>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-
-    <div class="projects-grid">
-
-      <div class="project-card featured">
-
-        <div class="card-img">
-          <span>? Description</span>
-        </div>
-
-        <div class="card-body">
-
-          <div class="card-title">
-            Design System
-          </div>
-
-          <div class="card-tags">
+  <section id="projects" class="alle-section alle-projects">
+    
+ 
+    <div class="projects-mosaic">
+ 
+      <!-- Row 1 -->
+      <a href="#" class="mosaic-card mc-featured reveal" aria-label="Design System">
+        <img src="./assets/images/project1.jpg" alt="Design System" class="mosaic-img">
+        <div class="mosaic-overlay">
+          <div class="mosaic-title">Design System</div>
+          <div class="mosaic-tags">
             <span class="tag">React</span>
             <span class="tag">Storybook</span>
             <span class="tag">TypeScript</span>
           </div>
-
         </div>
-
-      </div>
-
-      <div class="project-card">
-        <div class="card-img">
-          <span>? Description</span>
-        </div>
-
-        <div class="card-body">
-          <div class="card-title">SaaS Dashboard</div>
-
-          <div class="card-tags">
+        <span class="mosaic-badge">featured</span>
+      </a>
+ 
+      <a href="#" class="mosaic-card mc-b reveal" aria-label="SaaS Dashboard">
+        <img src="./assets/images/project2.jpg" alt="SaaS Dashboard" class="mosaic-img">
+        <div class="mosaic-overlay">
+          <div class="mosaic-title">Dashboard</div>
+          <div class="mosaic-tags">
             <span class="tag">Vue</span>
             <span class="tag">Node.js</span>
           </div>
         </div>
-      </div>
-
-      <div class="project-card">
-        <div class="card-img">
-          <span>? Description</span>
-        </div>
-
-        <div class="card-body">
-          <div class="card-title">Open Source CLI</div>
-
-          <div class="card-tags">
+      </a>
+ 
+      <a href="#" class="mosaic-card mc-c reveal" aria-label="Open Source CLI">
+        <img src="./assets/images/project3.jpg" alt="Open Source CLI" class="mosaic-img">
+        <div class="mosaic-overlay">
+          <div class="mosaic-title">Open Source CLI</div>
+          <div class="mosaic-tags">
             <span class="tag">Go</span>
             <span class="tag">Shell</span>
           </div>
         </div>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-
-    <div class="contact-inner">
-
-      <p>
-        Got a project, question, or just want to say hi?
-      </p>
-
-      <a href="mailto:hello@alle.dev" class="big-link">
-        hello@alle.dev
       </a>
+ 
+      <!-- Row 2 -->
+      <a href="#" class="mosaic-card mc-d reveal" aria-label="Project Four">
+        <img src="./assets/images/project4.jpg" alt="Project Four" class="mosaic-img">
+        <div class="mosaic-overlay">
+          <div class="mosaic-title">Project Four</div>
+          <div class="mosaic-tags"><span class="tag">Next.js</span></div>
+        </div>
+      </a>
+ 
+      <a href="#" class="mosaic-card mc-e reveal" aria-label="Project Five">
+        <img src="./assets/images/project5.jpg" alt="Project Five" class="mosaic-img">
+        <div class="mosaic-overlay">
+          <div class="mosaic-title">Project Five</div>
+          <div class="mosaic-tags"><span class="tag">Python</span></div>
+        </div>
+      </a>
+ 
+      <a href="#" class="mosaic-card mc-f reveal" aria-label="Project Six">
+        <img src="./assets/images/project6.jpg" alt="Project Six" class="mosaic-img">
+        <div class="mosaic-overlay">
+          <div class="mosaic-title">Project Six</div>
+          <div class="mosaic-tags"><span class="tag">Rust</span></div>
+        </div>
+      </a>
+ 
+      <a href="#" class="mosaic-card mc-g reveal" aria-label="Side Project">
+        <img src="./assets/images/project7.jpg" alt="Side Project" class="mosaic-img">
+        <div class="mosaic-overlay">
+          <div class="mosaic-title">Lorem ipsum dolor sit.</div>
+          <div class="mosaic-tags"><span class="tag">CSS</span></div>
+        </div>
+      </a>
+ 
+    </div>
+ 
+  </section>
 
-      <div class="social-links">
-        <a href="https://github.com">Github</a>
-        <a href="https://linkedin.com">LinkedIn</a>
-        <a href="https://twitter.com">Twitter</a>
+  <!-- ???????????????????????????????????????????
+       CONTACT
+  ??????????????????????????????????????????? -->
+  <section id="contact" class="alle-section alle-contact">
+    <div class="container-xl px-4 px-md-5">
+
+      <div class="contact-inner text-center">
+        <p class="contact-tagline">Got a project, question, or just want to say hi?</p>
+
+        <a href="mailto:alexandredetto.ale@gmail.com" class="big-link d-block my-4">
+          alexandredetto.ale@gmail.com
+        </a>
+
+        <div class="social-links d-flex justify-content-center gap-4">
+          <a href="https://github.com/helloAle">Github</a>
+          <a href="https://www.linkedin.com/in/oliveirale/">LinkedIn</a>
+          <!-- <a href="https://twitter.com">Twitter</a> -->
+        </div>
       </div>
 
     </div>
-
   </section>
 
-  <footer>
-    ? 2026 @helloAlle ? handcrafted with care ?
+  <!-- ???????????????????????????????????????????
+       FOOTER
+  ??????????????????????????????????????????? -->
+  <footer class="alle-footer text-center">
+    2026 @helloAlle - Software Engineer
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
 
   <!-- vou apagar bem isso aqui -->
     <div class="maintenance-overlay">
@@ -270,7 +282,7 @@
         <div class="maintenance-popup">
 
             <h1 id="maintenance-text">
-            Site em reforma - 90%
+            Site em reforma.
             </h1>
 
         </div>
@@ -278,14 +290,10 @@
     </div>
   <!-- vou apagar bem isso aqui -->
 
-  <script src="./js/main.js"></script>
-=======
-  <!-- Conteúdo Central -->
-  <main class="center">
-    <h1>Site em reforma</h1>
-  </main>
->>>>>>> b346a4d7f679d059582e3f572ea5ed4c8a4106ba
+  
 
-  <script src="matrix.js"></script>
+  <!-- Main script -->
+  <script src="./js/main.js"></script>
+
 </body>
 </html>
