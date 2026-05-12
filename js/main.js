@@ -120,4 +120,10 @@ window.addEventListener("scroll", activateLink, { passive: true });
         (frameIndex + 1) % frames.length;
 
     }, 320);
+    function closePopup() {
+
+      document
+        .getElementById("maintenance-overlay")
+        .style.display = "none";
+    }
 // apagar

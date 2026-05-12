@@ -250,9 +250,11 @@
       <div class="contact-inner text-center">
         <p class="contact-tagline">Got a project, question, or just want to say hi?</p>
 
-        <a href="mailto:alexandredetto.ale@gmail.com" class="big-link d-block my-4">
+        <!-- <a href="mailto:alexandredetto.ale@gmail.com" class="big-link d-block my-4">
           alexandredetto.ale@gmail.com
-        </a>
+        </a> -->
+        
+        <!-- tenho que modificar a fonte -->
 
         <div class="social-links d-flex justify-content-center gap-4">
           <a href="https://github.com/helloAle">Github</a>
@@ -277,16 +279,16 @@
 
 
   <!-- vou apagar bem isso aqui -->
-    <div class="maintenance-overlay">
+    <div class="maintenance-overlay" id="maintenance-overlay">
+      <div class="maintenance-popup">
 
-        <div class="maintenance-popup">
-
-            <h1 id="maintenance-text">
-            Site em reforma.
-            </h1>
-
-        </div>
-
+          <h1 id="maintenance-text">
+              Site em reforma.
+          </h1>
+          <button class="close-popup" onclick="closePopup()">
+              X
+          </button>
+      </div>
     </div>
   <!-- vou apagar bem isso aqui -->
 
