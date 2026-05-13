@@ -78,6 +78,39 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
 .alle-toggler span { display: block; width: 24px; height: 2px; background: var(--ink); }
 .alle-toggler:focus { box-shadow: none; }
 
+/* ?? NAVBAR ?????????????????????????????????? barra de navega??o fixa no topo */
+.alle-nav {
+  border-bottom: 1.5px solid var(--line);
+  background: rgba(26, 26, 26, 0.88) !important;
+  backdrop-filter: blur(6px);
+  padding: 16px 0;
+}
+
+.alle-brand { /* logo "@helloAlle" */
+  font-family: "Schoolbell", cursive;
+  font-size: 1.25rem;
+  color: var(--blue) !important;
+  text-decoration: none;
+}
+
+.alle-nav .nav-link { /* links do menu */
+  font-family: "Schoolbell", cursive;
+  color: var(--ink) !important;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.alle-nav .nav-link:hover,
+.alle-nav .nav-link.active { color: var(--blue) !important; }
+
+.alle-toggler { /* hamburger mobile */
+  border: none; background: transparent;
+  cursor: pointer; padding: 4px;
+  display: flex; flex-direction: column; gap: 5px;
+}
+.alle-toggler span { display: block; width: 24px; height: 2px; background: var(--ink); }
+.alle-toggler:focus { box-shadow: none; }
+
+
 /* ?? HERO ???????????????????????????????????? se??o de entrada, tela cheia */
 .alle-hero {
   min-height: 100vh;
@@ -124,6 +157,15 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
   color: var(--ink-muted); font-size: 1.5rem;
   text-decoration: none;
   animation: bounce 2s ease-in-out infinite;
+}
+
+.hero-scroll-hint img {
+  width: 32px;
+  height: 32px;
+}
+.back-top img {
+  width: 32px;
+  height: 32px;
 }
 
 /* ?? SECTION DIVIDERS ???????????????????????? linha com t?tulo entre se??es */

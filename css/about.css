@@ -51,37 +51,9 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
   position: relative; z-index: 1;
 }
 
-/* ?? NAVBAR ?????????????????????????????????? barra de navega??o fixa no topo */
-.alle-nav {
-  border-bottom: 1.5px solid var(--line);
-  background: rgba(26, 26, 26, 0.88) !important;
-  backdrop-filter: blur(6px);
-  padding: 16px 0;
+#about-title{
+  scroll-margin-top: 120px;
 }
-
-.alle-brand { /* logo "@helloAlle" */
-  font-family: "Schoolbell", cursive;
-  font-size: 1.25rem;
-  color: var(--blue) !important;
-  text-decoration: none;
-}
-
-.alle-nav .nav-link { /* links do menu */
-  font-family: "Schoolbell", cursive;
-  color: var(--ink) !important;
-  font-size: 1rem;
-  transition: color 0.2s;
-}
-.alle-nav .nav-link:hover,
-.alle-nav .nav-link.active { color: var(--blue) !important; }
-
-.alle-toggler { /* hamburger mobile */
-  border: none; background: transparent;
-  cursor: pointer; padding: 4px;
-  display: flex; flex-direction: column; gap: 5px;
-}
-.alle-toggler span { display: block; width: 24px; height: 2px; background: var(--ink); }
-.alle-toggler:focus { box-shadow: none; }
 
 /* ?? HERO ???????????????????????????????????? se??o de entrada, tela cheia */
 .alle-hero {
@@ -150,7 +122,7 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
 .back-top:hover { color: var(--blue); }
 
 /* ?? SECTIONS ???????????????????????????????? espa?amento padr?o das se??es */
-.alle-section { padding: 60px 0 80px; }
+.alle-section { padding: 10px 0 80px; }
 
 /* ?? ABOUT ??????????????????????????????????? textos e bot?es da se??o About */
 .lead { font-family: "Schoolbell", cursive; font-size: 1.15rem; color: var(--ink); }
