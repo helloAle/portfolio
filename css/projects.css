@@ -160,3 +160,10 @@
   .mc-featured { grid-column: 1 / 3; }
   .mc-b, .mc-c, .mc-d, .mc-e, .mc-f, .mc-g { grid-column: span 1; }
 }
+
+.projects-mosaic {
+  /* ... resto do que j? tem ... */
+  grid-auto-rows: 240px;
+}
+
+.mc-featured { aspect-ratio: unset; } /* deixa a altura do grid controlar */
