@@ -168,6 +168,17 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
   height: 32px;
 }
 
+/* cursor falso que pisca no final do texto */
+.word-right-a::after {
+  content: '|';
+  margin-left: 4px;
+  animation: pipeBlink 1s step-end infinite;
+  color: var(--ink);
+}
+.word-left-a {
+  margin-right: 0.35em;
+}
+
 /* ?? SECTION DIVIDERS ???????????????????????? linha com t?tulo entre se??es */
 .section-divider {
   display: flex; align-items: center; gap: 18px;

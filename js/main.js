@@ -1,129 +1,113 @@
 /* ???????????????????????????????????????????
-   SWAP TEXT ? hero subtitle cycling
+   TYPEWRITER ? hero title cycling
 ??????????????????????????????????????????? */
 
-const swaps = [
-  "building interfaces that feel alive",
-  "frontend engineer & creative coder",
-  "turning sketches into products"
+const phrases = [
+  "SOFTWARE ENGINEER",
+  "FRONT END DEVELOPER",
 ];
 
-let i = 0;
-const swapText = document.getElementById("swap-text");
+const leftWords  = ["SOFTWARE",   "FRONT END"];
+const rightWords = ["ENGINEER",   "DEVELOPER"];
 
-setInterval(() => {
-  // Fade out
-  swapText.style.opacity = "0";
-  swapText.style.transform = "translateY(6px)";
+const leftEl  = document.querySelector(".word-left-a")  || document.querySelector(".word-left-b");
+const rightEl = document.querySelector(".word-right-a") || document.querySelector(".word-right-b");
 
-  setTimeout(() => {
-    i = (i + 1) % swaps.length;
-    swapText.textContent = swaps[i];
+// Seleciona os elementos das duas rows
+const leftA  = document.querySelector(".word-left-a");
+const rightA = document.querySelector(".word-right-a");
+const leftB  = document.querySelector(".word-left-b");
+const rightB = document.querySelector(".word-right-b");
 
-    // Fade in
-    swapText.style.opacity = "1";
-    swapText.style.transform = "translateY(0)";
-  }, 350);
+// Remove as anima??es CSS existentes
+[leftA, rightA, leftB, rightB].forEach(el => {
+  if (el) el.style.animation = "none";
+});
 
-}, 4000);
+// Mostra s? a row A no in?cio, esconde a row B
+if (leftB)  leftB.style.opacity  = "0";
+if (rightB) rightB.style.opacity = "0";
+if (leftA)  leftA.style.opacity  = "1";
+if (rightA) rightA.style.opacity = "1";
 
-// Initialise transition on the swap span
-if (swapText) {
-  swapText.style.display = "inline-block";
-  swapText.style.transition = "opacity 0.35s ease, transform 0.35s ease";
+// Pipe fica vis?vel fixo (sem piscar do CSS)
+const pipe = document.querySelector(".hero-pipe");
+if (pipe) pipe.style.display = "none";
+
+let phraseIndex = 0;
+
+const TYPING_SPEED   = 80;   // ms por caractere digitando
+const DELETING_SPEED = 45;   // ms por caractere apagando
+const PAUSE_AFTER    = 2000; // ms de pausa ap?s digitar tudo
+const PAUSE_BEFORE   = 300;  // ms de pausa antes de come?ar a digitar
+
+function setHeroText(left, right) {
+  if (leftA)  leftA.textContent  = left;
+  if (rightA) rightA.textContent = right;
 }
 
-/* ???????????????????????????????????????????
-   SCROLL REVEAL ? IntersectionObserver
-??????????????????????????????????????????? */
+function typeWriter() {
+  const nextIndex = (phraseIndex + 1) % leftWords.length;
 
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, idx) => {
-    if (entry.isIntersecting) {
-      // Stagger siblings slightly
-      const delay = idx * 80;
-      setTimeout(() => {
-        entry.target.classList.add("visible");
-      }, delay);
-      revealObserver.unobserve(entry.target);
+  const currentLeft  = leftWords[phraseIndex];
+  const currentRight = rightWords[phraseIndex];
+  const nextLeft     = leftWords[nextIndex];
+  const nextRight    = rightWords[nextIndex];
+
+  // ? Apaga a frase atual (da direita pra esquerda em ambas as palavras)
+  function deletePhrase(callback) {
+    let l = currentLeft.length;
+    let r = currentRight.length;
+
+    function step() {
+      if (r > 0) {
+        r--;
+        setHeroText(currentLeft.slice(0, l), currentRight.slice(0, r));
+        setTimeout(step, DELETING_SPEED);
+      } else if (l > 0) {
+        l--;
+        setHeroText(currentLeft.slice(0, l), "");
+        setTimeout(step, DELETING_SPEED);
+      } else {
+        callback();
+      }
     }
-  });
-}, {
-  threshold: 0.12,
-  rootMargin: "0px 0px -40px 0px"
-});
-
-document.querySelectorAll(".reveal").forEach(el => {
-  revealObserver.observe(el);
-});
-
-/* ???????????????????????????????????????????
-   NAVBAR ? shrink on scroll + active link
-??????????????????????????????????????????? */
-
-const nav = document.getElementById("mainNav");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 40) {
-    nav.classList.add("scrolled");
-  } else {
-    nav.classList.remove("scrolled");
+    step();
   }
-}, { passive: true });
 
-// Highlight active nav link based on scroll position
-const sections  = document.querySelectorAll("section[id]");
-const navLinks  = document.querySelectorAll(".alle-nav .nav-link");
+  // ? Digita a pr?xima frase
+  function typePhrase(callback) {
+    let l = 0;
+    let r = 0;
 
-const activateLink = () => {
-  let current = "";
-
-  sections.forEach(section => {
-    const top = section.offsetTop - 100;
-    if (window.scrollY >= top) {
-      current = section.getAttribute("id");
+    function step() {
+      if (l < nextLeft.length) {
+        l++;
+        setHeroText(nextLeft.slice(0, l), "");
+        setTimeout(step, TYPING_SPEED);
+      } else if (r < nextRight.length) {
+        r++;
+        setHeroText(nextLeft, nextRight.slice(0, r));
+        setTimeout(step, TYPING_SPEED);
+      } else {
+        callback();
+      }
     }
-  });
+    step();
+  }
 
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active");
-    }
-  });
-};
+  // Sequ?ncia: pausa ? apaga ? pausa ? digita ? pausa ? repete
+  setTimeout(() => {
+    deletePhrase(() => {
+      phraseIndex = nextIndex;
+      setTimeout(() => {
+        typePhrase(() => {
+          setTimeout(typeWriter, PAUSE_AFTER);
+        });
+      }, PAUSE_BEFORE);
+    });
+  }, PAUSE_AFTER);
+}
 
-window.addEventListener("scroll", activateLink, { passive: true });
-
-
- // apagar isso:
-    /* ===================== MAINTENANCE LOADING ===================== */
-
-    const maintenanceText =
-      document.getElementById("maintenance-text");
-
-    const frames = [
-
-      "Site em reforma.",
-      "Site em reforma..",
-      "Site em reforma...",
-    ];
-
-    let frameIndex = 0;
-
-    setInterval(() => {
-
-      maintenanceText.textContent =
-        frames[frameIndex];
-
-      frameIndex =
-        (frameIndex + 1) % frames.length;
-
-    }, 320);
-    function closePopup() {
-
-      document
-        .getElementById("maintenance-overlay")
-        .style.display = "none";
-    }
-// apagar
+// Inicia ap?s a primeira exibi??o
+setTimeout(typeWriter, PAUSE_AFTER);
