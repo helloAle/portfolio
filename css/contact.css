@@ -100,3 +100,24 @@
 #message-mail button:active {
   transform: scale(0.97);
 }
+
+.form-popup {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--paper-dark);
+  border: 1px solid var(--blue);
+  color: var(--ink);
+  font-family: "Schoolbell", cursive;
+  font-size: 1rem;
+  padding: 12px 28px;
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.form-popup.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

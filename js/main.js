@@ -125,6 +125,29 @@ const observer = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => observer.observe(el));
 
+const form = document.getElementById('message-mail');
+const popup = document.getElementById('form-popup');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  await fetch('https://formsubmit.co/ajax/alexandredetto.ale@gmail.com', {
+    method: 'POST',
+    body: data,
+  });
+
+  // mostra o popup
+  popup.classList.remove('hidden');
+
+  // some ap?s 3 segundos
+  setTimeout(() => {
+    popup.classList.add('hidden');
+  }, 3000);
+
+  form.reset();
+});
 
 
  // apagar isso:

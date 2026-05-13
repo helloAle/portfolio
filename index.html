@@ -257,16 +257,21 @@
           alexandredetto.ale@gmail.com
         </a>
 
-        <form id="message-mail" action="https://formsubmit.co/alexandredetto.ale@gmail.com" method="POST">
+        <form id="message-mail">
           <input type="text" name="name" placeholder="name" required>
           <input type="email" name="email" placeholder="email" required>
-          <textarea cols="30" rows="10" name="message" placeholder="send me a message"></textarea>
+          <textarea name="message" placeholder="send me a message" required></textarea>
           <button type="submit">Send</button>
 
           <input type="hidden" name="_subject" value="New Contact!">
-          <input type="text" name="_honey" style="display:none"> <!-- não vao como spam -->
-          <input type="hidden" name="_captcha" value="false"> <!-- sem captcha -->
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_captcha" value="false">
         </form>
+
+        <!-- popup -->
+        <div id="form-popup" class="form-popup hidden">
+          <span>Message sent!</span>
+        </div>
 
         <!-- tenho que modificar a fonte -->
 
