@@ -70,7 +70,7 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
   display: flex; align-items: center; justify-content: center;
 }
 
-.hero-row-a, .hero-row-b { /* cada par SOFTWARE|ENGINEER e FRONT END|DEVELOPER */
+.hero-row-a, .hero-row-b .hero-row-c { /* cada par SOFTWARE|ENGINEER e FRONT END|DEVELOPER */
   position: absolute; top: 0; left: 0; width: 100%;
   display: flex; align-items: center; justify-content: center;
 }
@@ -82,7 +82,7 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
   white-space: nowrap; line-height: 1;
 }
 
-.hero-pipe { /* barra vertical piscante entre as palavras */
+.  { /* barra vertical piscante entre as palavras */
   width: 3px; height: var(--hero-size);
   background: var(--ink);
   margin: 0 clamp(10px, 2vw, 28px);
@@ -90,7 +90,7 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
   animation: pipeBlink 1s step-end 0.6s infinite;
 }
 
-.pipe-placeholder { /* espa?o invis?vel que alinha a row B */
+.  { /* espa?o invis?vel que alinha a row B */
   width: 3px; height: var(--hero-size);
   margin: 0 clamp(10px, 2vw, 28px); opacity: 0;
 }
@@ -178,7 +178,7 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
 }
 
 /* hero ? SOFTWARE entra / sai para a esquerda */
-.word-left-a  { animation: wordLeftA  7.6s cubic-bezier(.4,0,.2,1) 0.4s infinite; }
+. a  { animation: wordLeftA  7.6s cubic-bezier(.4,0,.2,1) 0.4s infinite; }
 @keyframes wordLeftA {
   0%  { opacity:0; transform:translateX(0); }
   5%  { opacity:1; transform:translateX(0); }
@@ -202,7 +202,7 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
 }
 
 /* hero ? FRONT END entra / sai para a esquerda */
-.word-left-b  { animation: wordLeftB  7.6s cubic-bezier(.4,0,.2,1) 0.4s infinite; }
+. b  { animation: wordLeftB  7.6s cubic-bezier(.4,0,.2,1) 0.4s infinite; }
 @keyframes wordLeftB {
   0%  { opacity:0; transform:translateX(-110%); }
   26% { opacity:0; transform:translateX(-110%); }

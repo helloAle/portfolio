@@ -1,17 +1,17 @@
-/* ?? VARI?VEIS ??????????????????????????????? */
+/* ?? VARI?VEIS ??????????????????????????????????????? */
 :root {
-  --ink:        #f5f1e8;   /* texto principal claro */
-  --ink-muted:  #b8b4c7;   /* texto secund?rio */
-  --blue:       #5aa9ff;   /* azul destaque */
-  --blue-light: #8cc4ff;   /* azul claro */
-  --paper:      #11121a;   /* fundo principal escuro */
-  --paper-dark: #1b1d29;   /* cards/se??es */
-  --line:       rgba(245,241,232,0.12); /* bordas sutis claras */
-  --red:        #ff6b5e;   /* vermelho accent */
+  --ink:        #f5f1e8;
+  --ink-muted:  #b8b4c7;
+  --blue:       #5aa9ff;
+  --blue-light: #8cc4ff;
+  --paper:      #11121a;
+  --paper-dark: #1b1d29;
+  --line:       rgba(245,241,232,0.12);
+  --red:        #ff6b5e;
   --hero-size:  clamp(2.6rem, 8vw, 7rem);
 }
 
-/* ?? BASE ???????????????????????????????????? tela e body */
+/* ?? BASE ???????????????????????????????????????????? */
 html { scroll-behavior: smooth; }
 
 body {
@@ -22,7 +22,7 @@ body {
   position: relative;
 }
 
-body::before { /* textura de papel sobreposta */
+body::before { /* textura de papel */
   content: '';
   position: fixed; inset: 0;
   background: url('../assets/images/paper_texture.jpg') center/cover;
@@ -42,43 +42,11 @@ body::after { /* linhas de caderno */
   pointer-events: none; z-index: 0;
 }
 
-nav, section, .section-divider, footer { /* garante que o conte?do fica acima das overlays */
+nav, section, .section-divider, footer {
   position: relative; z-index: 1;
 }
 
-/* ?? NAVBAR ?????????????????????????????????? barra de navega??o fixa no topo */
-.alle-nav {
-  border-bottom: 1.5px solid var(--line);
-  background: rgba(248,245,239,0.88) !important;
-  backdrop-filter: blur(6px);
-  padding: 16px 0;
-}
-
-.alle-brand { /* logo "@helloAlle" */
-  font-family: "Schoolbell", cursive;
-  font-size: 1.25rem;
-  color: var(--blue) !important;
-  text-decoration: none;
-}
-
-.alle-nav .nav-link { /* links do menu */
-  font-family: "Schoolbell", cursive;
-  color: var(--ink) !important;
-  font-size: 1rem;
-  transition: color 0.2s;
-}
-.alle-nav .nav-link:hover,
-.alle-nav .nav-link.active { color: var(--blue) !important; }
-
-.alle-toggler { /* hamburger mobile */
-  border: none; background: transparent;
-  cursor: pointer; padding: 4px;
-  display: flex; flex-direction: column; gap: 5px;
-}
-.alle-toggler span { display: block; width: 24px; height: 2px; background: var(--ink); }
-.alle-toggler:focus { box-shadow: none; }
-
-/* ?? NAVBAR ?????????????????????????????????? barra de navega??o fixa no topo */
+/* ?? NAVBAR ?????????????????????????????????????????? */
 .alle-nav {
   border-bottom: 1.5px solid var(--line);
   background: rgba(26, 26, 26, 0.88) !important;
@@ -86,14 +54,14 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
   padding: 16px 0;
 }
 
-.alle-brand { /* logo "@helloAlle" */
+.alle-brand {
   font-family: "Schoolbell", cursive;
   font-size: 1.25rem;
   color: var(--blue) !important;
   text-decoration: none;
 }
 
-.alle-nav .nav-link { /* links do menu */
+.alle-nav .nav-link {
   font-family: "Schoolbell", cursive;
   color: var(--ink) !important;
   font-size: 1rem;
@@ -102,7 +70,7 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
 .alle-nav .nav-link:hover,
 .alle-nav .nav-link.active { color: var(--blue) !important; }
 
-.alle-toggler { /* hamburger mobile */
+.alle-toggler {
   border: none; background: transparent;
   cursor: pointer; padding: 4px;
   display: flex; flex-direction: column; gap: 5px;
@@ -110,8 +78,7 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
 .alle-toggler span { display: block; width: 24px; height: 2px; background: var(--ink); }
 .alle-toggler:focus { box-shadow: none; }
 
-
-/* ?? HERO ???????????????????????????????????? se??o de entrada, tela cheia */
+/* ?? HERO ???????????????????????????????????????????? */
 .alle-hero {
   min-height: 100vh;
   padding: 120px 60px 80px;
@@ -120,66 +87,41 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
 
 .hero-stage { width: 100%; display: flex; flex-direction: column; align-items: center; }
 
-.hero-row-wrap { /* container que empilha as duas rows animadas */
+.hero-row-wrap {
   position: relative; width: 100%;
   height: var(--hero-size);
   display: flex; align-items: center; justify-content: center;
 }
 
-.hero-row-a, .hero-row-b { /* cada par SOFTWARE|ENGINEER e FRONT END|DEVELOPER */
-  position: absolute; top: 0; left: 0; width: 100%;
-  display: flex; align-items: center; justify-content: center;
-}
-
-.hero-word { /* texto gigante do hero */
+.hero-typing {
   font-family: "Schoolbell", cursive;
   font-size: var(--hero-size);
-  font-weight: 400; color: var(--ink);
-  white-space: nowrap; line-height: 1;
+  font-weight: 400;
+  color: var(--ink);
+  white-space: nowrap;
+  line-height: 1;
 }
 
-.hero-pipe { /* barra vertical piscante entre as palavras */
-  width: 3px; height: var(--hero-size);
-  background: var(--ink);
-  margin: 0 clamp(10px, 2vw, 28px);
-  border-radius: 2px; flex-shrink: 0;
-  animation: pipeBlink 1s step-end 0.6s infinite;
-}
-
-.pipe-placeholder { /* espa?o invis?vel que alinha a row B */
-  width: 3px; height: var(--hero-size);
-  margin: 0 clamp(10px, 2vw, 28px); opacity: 0;
-}
-
-.hero-subtitle { color: var(--blue); font-size: 1.3rem; min-height: 2em; }
-
-.hero-scroll-hint { /* seta com bounce */
-  color: var(--ink-muted); font-size: 1.5rem;
-  text-decoration: none;
-  animation: bounce 2s ease-in-out infinite;
-}
-
-.hero-scroll-hint img {
-  width: 32px;
-  height: 32px;
-}
-.back-top img {
-  width: 32px;
-  height: 32px;
-}
-
-/* cursor falso que pisca no final do texto */
-.word-right-a::after {
+/* cursor piscante no final do texto */
+.hero-typing::after {
   content: '|';
   margin-left: 4px;
   animation: pipeBlink 1s step-end infinite;
   color: var(--ink);
 }
-.word-left-a {
-  margin-right: 0.35em;
+
+.hero-subtitle { color: var(--blue); font-size: 1.3rem; min-height: 2em; }
+
+.hero-scroll-hint {
+  color: var(--ink-muted); font-size: 1.5rem;
+  text-decoration: none;
+  animation: bounce 2s ease-in-out infinite;
 }
 
-/* ?? SECTION DIVIDERS ???????????????????????? linha com t?tulo entre se??es */
+.hero-scroll-hint img { width: 32px; height: 32px; }
+.back-top img         { width: 32px; height: 32px; }
+
+/* ?? SECTION DIVIDERS ???????????????????????????????? */
 .section-divider {
   display: flex; align-items: center; gap: 18px;
   max-width: 1200px; margin: 0 auto; padding-top: 0;
@@ -191,205 +133,34 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
 }
 .divider-line { flex: 1; height: 1px; background: var(--line); }
 
-.back-top { /* seta ? voltar ao topo */
+.back-top {
   text-decoration: none; color: var(--ink-muted);
   font-size: 1.1rem; transition: color 0.2s;
 }
 .back-top:hover { color: var(--blue); }
 
-/* ?? SECTIONS ???????????????????????????????? espa?amento padr?o das se??es */
+/* ?? SECTIONS ???????????????????????????????????????? */
 .alle-section { padding: 60px 0 80px; }
 
-
-
-
-/* ?? SCROLL REVEAL ??????????????????????????? anima??o de entrada ao rolar */
+/* ?? SCROLL REVEAL ??????????????????????????????????? */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* ?? KEYFRAMES ??????????????????????????????? todas as anima??es CSS */
-
-@keyframes pipeBlink { /* cursor piscante do hero */
+/* ?? KEYFRAMES ??????????????????????????????????????? */
+@keyframes pipeBlink {
   0%, 100% { opacity: 1; } 50% { opacity: 0; }
 }
 
-@keyframes bounce { /* seta do hero */
+@keyframes bounce {
   0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); }
 }
 
-/* hero ? SOFTWARE entra / sai para a esquerda */
-.word-left-a  { animation: wordLeftA  7.6s cubic-bezier(.4,0,.2,1) 0.4s infinite; }
-@keyframes wordLeftA {
-  0%  { opacity:0; transform:translateX(0); }
-  5%  { opacity:1; transform:translateX(0); }
-  18% { opacity:1; transform:translateX(0); }
-  26% { opacity:0; transform:translateX(-110%); }
-  65% { opacity:0; transform:translateX(-110%); }
-  73% { opacity:1; transform:translateX(0); }
-  100%{ opacity:1; transform:translateX(0); }
-}
-
-/* hero ? ENGINEER entra / sai para a direita */
-.word-right-a { animation: wordRightA 7.6s cubic-bezier(.4,0,.2,1) 0.4s infinite; }
-@keyframes wordRightA {
-  0%  { opacity:0; transform:translateX(0); }
-  5%  { opacity:1; transform:translateX(0); }
-  18% { opacity:1; transform:translateX(0); }
-  26% { opacity:0; transform:translateX(110%); }
-  65% { opacity:0; transform:translateX(110%); }
-  73% { opacity:1; transform:translateX(0); }
-  100%{ opacity:1; transform:translateX(0); }
-}
-
-/* hero ? FRONT END entra / sai para a esquerda */
-.word-left-b  { animation: wordLeftB  7.6s cubic-bezier(.4,0,.2,1) 0.4s infinite; }
-@keyframes wordLeftB {
-  0%  { opacity:0; transform:translateX(-110%); }
-  26% { opacity:0; transform:translateX(-110%); }
-  34% { opacity:1; transform:translateX(0); }
-  57% { opacity:1; transform:translateX(0); }
-  65% { opacity:0; transform:translateX(-110%); }
-  100%{ opacity:0; transform:translateX(-110%); }
-}
-
-/* hero ? DEVELOPER entra / sai para a direita */
-.word-right-b { animation: wordRightB 7.6s cubic-bezier(.4,0,.2,1) 0.4s infinite; }
-@keyframes wordRightB {
-  0%  { opacity:0; transform:translateX(110%); }
-  26% { opacity:0; transform:translateX(110%); }
-  34% { opacity:1; transform:translateX(0); }
-  57% { opacity:1; transform:translateX(0); }
-  65% { opacity:0; transform:translateX(110%); }
-  100%{ opacity:0; transform:translateX(110%); }
-}
-
-/* ?? RESPONSIVE ?????????????????????????????? ajustes para telas pequenas */
+/* ?? RESPONSIVE ?????????????????????????????????????? */
 @media (max-width: 767.98px) {
   .alle-hero    { padding: 100px 24px 60px; }
   .alle-section { padding: 40px 0 60px; }
   .big-link     { font-size: 1.3rem; }
 }
-
-
-
-
-
-/* apagar isso aqui */
-/* ===================== MAINTENANCE POPUP ===================== */
-
-.maintenance-overlay {
-
-  position: fixed;
-  inset: 0;
-
-  z-index: 999999;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  backdrop-filter: blur(14px);
-
-  background: rgba(248,245,239,0.35);
-}
-
-.maintenance-popup {
-
-  width: min(90%, 500px);
-
-  padding: 40px 30px;
-
-  border: 1.5px solid rgba(26,26,46,0.18);
-
-  border-radius: 24px;
-
-  background: rgba(59, 59, 59, 0.82);
-
-  backdrop-filter: blur(20px);
-
-  text-align: center;
-
-  box-shadow:
-    0 10px 40px rgba(0,0,0,0.08);
-
-  animation: popupAppear 0.6s cubic-bezier(.2,.8,.2,1);
-}
-
-.close-popup {
-
-  position: relative;
-
-  top: 14px;
-  right: 18px;
-
-  border: none;
-  background: transparent;
-
-  font-size: 2rem;
-
-  cursor: pointer;
-
-  color: var(--ink);
-
-  transition: 0.2s ease;
-}
-
-.close-popup:hover {
-
-  transform: scale(1.1);
-
-  opacity: 0.7;
-}
-
-.maintenance-popup h1 {
-
-  font-family: "Schoolbell", cursive;
-
-  font-size: clamp(2rem, 4vw, 3rem);
-
-  color: var(--ink);
-
-  margin-bottom: 0;
-  min-height: 4rem;   
-
-  line-height: 1.2;
-}
-
-.maintenance-gif {
-
-  width: min(100%, 320px);
-
-  border-radius: 18px;
-
-  display: block;
-
-  margin: 0 auto;
-}
-
-@keyframes popupAppear {
-
-  from {
-
-    opacity: 0;
-
-    transform:
-      translateY(20px)
-      scale(0.96);
-
-  }
-
-  to {
-
-    opacity: 1;
-
-    transform:
-      translateY(0)
-      scale(1);
-
-  }
-}
-/* apagar acima */
-
 
 
 /* 
