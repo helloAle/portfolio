@@ -1,145 +1,66 @@
+/* ?? PROJECTS ????????????????????????????????????????? */
 
-
-/* ?? PROJECT CARDS ??????????????????????????? cards da se??o Projects */
-.project-card {
-  border: 1px solid var(--line);
-  background: rgba(248,245,239,0.6);
-  display: flex; flex-direction: column;
-  overflow: hidden;
-  transition: transform 0.25s, box-shadow 0.25s;
-}
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 32px rgba(26,26,46,0.08);
-}
-
-.card-img { /* ?rea de imagem/preview do projeto */
-  aspect-ratio: 16/9;
-  background: var(--paper-dark);
-  display: flex; align-items: flex-end; padding: 10px; flex-shrink: 0;
-}
-.project-card.featured .card-img { aspect-ratio: 16/8; } /* card grande tem imagem maior */
-
-.card-body-inner { padding: 16px; }
-.card-title-text { font-size: 1.1rem; color: var(--ink); margin-bottom: 8px; }
-
-.card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-.tag { /* badges de tecnologia */
-  border: 1px solid var(--blue-light); color: var(--blue);
-  padding: 2px 8px; font-size: 0.78rem;
-  font-family: "Schoolbell", cursive;
-}
-
-/* ?? PROJECT CARDS ??????????????????????????? cards da se??o Projects */
-.project-card {
-  border: 1px solid var(--line);
-  background: rgba(73, 73, 73, 0.6);
-  /* background: rgba(248,245,239,0.6); */
-  display: flex; flex-direction: column;
-  overflow: hidden;
-  transition: transform 0.25s, box-shadow 0.25s;
-}
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 32px rgba(26,26,46,0.08);
-}
-
-.card-img { /* ?rea de imagem/preview do projeto */
-  aspect-ratio: 16/9;
-  background: var(--paper-dark);
-  display: flex; align-items: flex-end; padding: 10px; flex-shrink: 0;
-}
-.project-card.featured .card-img { aspect-ratio: 16/8; } /* card grande tem imagem maior */
-
-.card-body-inner { padding: 16px; }
-.card-title-text { font-size: 1.1rem; color: var(--ink); margin-bottom: 8px; }
-
-.card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-.tag { /* badges de tecnologia */
-  border: 1px solid var(--blue-light); color: var(--blue);
-  padding: 2px 8px; font-size: 0.78rem;
-  font-family: "Schoolbell", cursive;
-}
-
-#projects{
+#projects {
   padding-top: 60px;
   scroll-margin-top: 120px;
 }
 
+.alle-projects { padding: 0 0 80px; }
+
 .projects-mosaic {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto auto;
-  gap: 8px;
-  padding: 0 clamp(16px, 4vw, 60px);
-  max-width: 1400px;
-  margin: 0 auto;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 260px 200px;
+  gap: 3px;
+  width: 100%;
+  padding: 0 clamp(16px, 3vw, 48px); /* <- adicionar isso */
 }
 
-/* posicionamento de cada card no grid */
-.mc-featured { grid-column: 1 / 3; grid-row: 1 / 2; }
-.mc-b        { grid-column: 3 / 4; grid-row: 1 / 2; }
-.mc-c        { grid-column: 4 / 5; grid-row: 1 / 2; }
-.mc-d        { grid-column: 1 / 2; grid-row: 2 / 3; }
-.mc-e        { grid-column: 2 / 3; grid-row: 2 / 3; }
-.mc-f        { grid-column: 3 / 4; grid-row: 2 / 3; }
-.mc-g        { grid-column: 4 / 5; grid-row: 2 / 3; }
+/* posicionamento de cada card no grid de 12 colunas */
+.mc-featured { grid-column: 1 / 6;  grid-row: 1; }
+.mc-b        { grid-column: 6 / 9;  grid-row: 1; }
+.mc-c        { grid-column: 9 / 13; grid-row: 1; }
+.mc-d        { grid-column: 1 / 4;  grid-row: 2; }
+.mc-e        { grid-column: 4 / 8;  grid-row: 2; }
+.mc-f        { grid-column: 8 / 11; grid-row: 2; }
+.mc-g        { grid-column: 11/ 13; grid-row: 2; }
 
 .mosaic-card {
   position: relative;
   overflow: hidden;
   display: block;
-  aspect-ratio: 4/3;
-  text-decoration: none;
   background: var(--paper-dark);
+  text-decoration: none;
 }
-
-.mc-featured { aspect-ratio: 16/9; }
 
 .mosaic-img {
-  width: 100%;
-  height: 100%;
+  width: 100%; height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.45s ease;
 }
 
-.mosaic-card:hover .mosaic-img {
-  transform: scale(1.05);
-}
+.mosaic-card:hover .mosaic-img { transform: scale(1.05); }
 
 .mosaic-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(10,10,20,0.85) 0%, transparent 60%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 16px;
+  position: absolute; inset: 0;
+  background: rgba(26,26,46,0.78);
   opacity: 0;
   transition: opacity 0.3s ease;
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
 }
 
 .mosaic-card:hover .mosaic-overlay { opacity: 1; }
 
 .mosaic-title {
-  font-family: "Schoolbell", cursive;
   color: var(--ink);
-  font-size: 1.1rem;
-  margin-bottom: 8px;
+  font-size: 1rem;
+  margin-bottom: 6px;
 }
 
-.mosaic-badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: var(--blue);
-  color: var(--paper);
-  font-family: "Schoolbell", cursive;
-  font-size: 0.75rem;
-  padding: 2px 10px;
-  border-radius: 2px;
-}
+.mosaic-tags { display: flex; gap: 4px; flex-wrap: wrap; }
 
 .tag {
   border: 1px solid var(--blue-light);
@@ -149,24 +70,44 @@
   font-family: "Schoolbell", cursive;
 }
 
-.mosaic-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.mosaic-badge {
+  position: absolute; top: 10px; left: 10px;
+  background: rgba(37,99,168,0.85);
+  color: var(--paper);
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
 
-/* responsivo */
+/* placeholder quando n?o h? imagem */
+.mosaic-card::before {
+  content: attr(aria-label);
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+/* ?? RESPONSIVE ??????????????????????????????????????? */
 @media (max-width: 767.98px) {
   .projects-mosaic {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: none;
+    grid-template-rows: repeat(4, 160px);
   }
-  .mc-featured { grid-column: 1 / 3; }
-  .mc-b, .mc-c, .mc-d, .mc-e, .mc-f, .mc-g { grid-column: span 1; }
-}
 
-.projects-mosaic {
-  /* ... resto do que j? tem ... */
-  grid-auto-rows: 240px;
+  .mc-featured { grid-column: 1 / 3; grid-row: 1; }
+  .mc-b        { grid-column: 1 / 2; grid-row: 2; }
+  .mc-c        { grid-column: 2 / 3; grid-row: 2; }
+  .mc-d        { grid-column: 1 / 2; grid-row: 3; }
+  .mc-e        { grid-column: 2 / 3; grid-row: 3; }
+  .mc-f        { grid-column: 1 / 2; grid-row: 4; }
+  .mc-g        { grid-column: 2 / 3; grid-row: 4; }
 }
-
-.mc-featured { aspect-ratio: unset; } /* deixa a altura do grid controlar */
 
 
 /* 
