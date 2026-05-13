@@ -124,3 +124,37 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 revealEls.forEach(el => observer.observe(el));
+
+
+
+ // apagar isso:
+    /* ===================== MAINTENANCE LOADING ===================== */
+
+    const maintenanceText =
+      document.getElementById("maintenance-text");
+
+    const frames = [
+      "Site em reforma",
+      "Site em reforma.",
+      "Site em reforma..",
+      "Site em reforma...",
+    ];
+
+    let frameIndex = 0;
+
+    setInterval(() => {
+
+      maintenanceText.textContent =
+        frames[frameIndex];
+
+      frameIndex =
+        (frameIndex + 1) % frames.length;
+
+    }, 320);
+    function closePopup() {
+
+      document
+        .getElementById("maintenance-overlay")
+        .style.display = "none";
+    }
+// apagar
