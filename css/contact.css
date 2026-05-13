@@ -25,7 +25,7 @@
 
 .big-link { /* e-mail em destaque */
   font-family: "Schoolbell", cursive;
-  font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+  font-size: clamp(0.93rem, 2.3vw, 1.67rem);
   color: var(--blue); text-decoration: none;
   word-break: break-all; transition: color 0.2s;
 }
@@ -43,4 +43,60 @@
   border-top: 1px solid var(--line);
   color: var(--ink-muted); font-size: 0.9rem;
   position: relative; z-index: 1;
+}
+
+/* formulario */
+
+#message-mail {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  width: 100%;
+  max-width: 500px;
+
+  margin: 0 auto; /* centraliza */
+  margin-bottom: 40px;
+}
+
+#message-mail input,
+#message-mail textarea,
+#message-mail button {
+  width: 100%;
+
+  padding: 0.5rem 1rem;
+
+  border: 1px solid var(--line);
+  border-radius: 12px;
+
+  background: var(--paper-dark);
+  color: var(--ink);
+
+  font: inherit;
+}
+
+#message-mail textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+#message-mail button {
+  background: #5aa9ff;
+
+  color: #11121a;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 
+    background 0.25s ease,
+    transform 0.2s ease;
+}
+
+#message-mail button:hover {
+  background: #8cc4ff;
+}
+
+#message-mail button:active {
+  transform: scale(0.97);
 }
