@@ -121,3 +121,7 @@
   opacity: 0;
   pointer-events: none;
 }
+
+#contact{
+  scroll-margin-top: 75px;
+}
