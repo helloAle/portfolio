@@ -1,14 +1,14 @@
 /* ?? VARI?VEIS ??????????????????????????????? */
 :root {
-  --ink:        #1a1a2e;   /* texto principal */
-  --ink-muted:  #3a3a5c;   /* texto secund?rio */
-  --blue:       #2563a8;   /* cor de destaque azul */
-  --blue-light: #4a90d9;   /* azul mais claro (tags) */
-  --paper:      #f8f5ef;   /* fundo bege */
-  --paper-dark: #ede9e0;   /* fundo levemente mais escuro (cards) */
-  --line:       rgba(26,26,46,0.15); /* cor das bordas/linhas sutis */
-  --red:        #c0392b;   /* accent vermelho (hover email) */
-  --hero-size:  clamp(2.6rem, 8vw, 7rem); /* tamanho responsivo do hero */
+  --ink:        #f5f1e8;   /* texto principal claro */
+  --ink-muted:  #b8b4c7;   /* texto secund?rio */
+  --blue:       #5aa9ff;   /* azul destaque */
+  --blue-light: #8cc4ff;   /* azul claro */
+  --paper:      #11121a;   /* fundo principal escuro */
+  --paper-dark: #1b1d29;   /* cards/se??es */
+  --line:       rgba(245,241,232,0.12); /* bordas sutis claras */
+  --red:        #ff6b5e;   /* vermelho accent */
+  --hero-size:  clamp(2.6rem, 8vw, 7rem);
 }
 
 /* ?? BASE ???????????????????????????????????? tela e body */
@@ -222,7 +222,7 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
 /* apagar isso aqui */
 /* ===================== MAINTENANCE POPUP ===================== */
 
-.maintenance-overlay {
+/* .maintenance-overlay {
 
   position: fixed;
   inset: 0;
@@ -332,5 +332,5 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
       scale(1);
 
   }
-}
+} */
 /* apagar acima */

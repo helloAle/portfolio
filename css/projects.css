@@ -2,7 +2,8 @@
 /* ?? PROJECT CARDS ??????????????????????????? cards da se??o Projects */
 .project-card {
   border: 1px solid var(--line);
-  background: rgba(248,245,239,0.6);
+  background: rgba(73, 73, 73, 0.6);
+  /* background: rgba(248,245,239,0.6); */
   display: flex; flex-direction: column;
   overflow: hidden;
   transition: transform 0.25s, box-shadow 0.25s;

@@ -4,7 +4,7 @@
 .contact-tagline { color: var(--ink-muted); font-size: 1.1rem; }
 
 .big-link { /* e-mail em destaque */
-  font-family: "Ballet", cursive;
+  font-family: "Schoolbell", cursive;
   font-size: clamp(1.4rem, 3.5vw, 2.5rem);
   color: var(--blue); text-decoration: none;
   word-break: break-all; transition: color 0.2s;
