@@ -155,55 +155,6 @@ nav, section, .section-divider, footer { /* garante que o conte?do fica acima da
   color: var(--ink-muted); line-height: 1.7; font-size: 0.95rem;
 }
 
-/* ?? PROJECT CARDS ??????????????????????????? cards da se??o Projects */
-.project-card {
-  border: 1px solid var(--line);
-  background: rgba(248,245,239,0.6);
-  display: flex; flex-direction: column;
-  overflow: hidden;
-  transition: transform 0.25s, box-shadow 0.25s;
-}
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 32px rgba(26,26,46,0.08);
-}
-
-.card-img { /* ?rea de imagem/preview do projeto */
-  aspect-ratio: 16/9;
-  background: var(--paper-dark);
-  display: flex; align-items: flex-end; padding: 10px; flex-shrink: 0;
-}
-.project-card.featured .card-img { aspect-ratio: 16/8; } /* card grande tem imagem maior */
-
-.card-body-inner { padding: 16px; }
-.card-title-text { font-size: 1.1rem; color: var(--ink); margin-bottom: 8px; }
-
-.card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-.tag { /* badges de tecnologia */
-  border: 1px solid var(--blue-light); color: var(--blue);
-  padding: 2px 8px; font-size: 0.78rem;
-  font-family: "Schoolbell", cursive;
-}
-
-/* ?? CONTACT ????????????????????????????????? se??o de contato */
-.alle-contact { border-top: 1px solid var(--line); }
-.contact-inner { padding: 20px 0 40px; }
-.contact-tagline { color: var(--ink-muted); font-size: 1.1rem; }
-
-.big-link { /* e-mail em destaque */
-  font-family: "Ballet", cursive;
-  font-size: clamp(1.4rem, 3.5vw, 2.5rem);
-  color: var(--blue); text-decoration: none;
-  word-break: break-all; transition: color 0.2s;
-}
-.big-link:hover { color: var(--red); }
-
-.social-links a { /* Github / LinkedIn / Twitter */
-  color: var(--ink-muted); text-decoration: none;
-  font-size: 1rem; transition: color 0.2s;
-}
-.social-links a:hover { color: var(--blue); }
-
 /* ?? FOOTER ?????????????????????????????????? rodap? */
 .alle-footer {
   padding: 24px;
