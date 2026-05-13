@@ -134,10 +134,10 @@ revealEls.forEach(el => observer.observe(el));
       document.getElementById("maintenance-text");
 
     const frames = [
-      "Site em reforma",
-      "Site em reforma.",
-      "Site em reforma..",
-      "Site em reforma...",
+      "Website under maintenance",
+      "Website under maintenance.",
+      "Website under maintenance..",
+      "Website under maintenance...",
     ];
 
     let frameIndex = 0;
