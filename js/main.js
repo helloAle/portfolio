@@ -74,7 +74,7 @@ if (form && popup) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const data = new FormData(form);
-    await fetch('https://formsubmit.co/ajax/alexandredetto.ale@gmail.com', {
+    await fetch('https://formsubmit.co/ajax/olidev.alexandre@gmail.com', {
       method: 'POST',
       body: data,
     });
