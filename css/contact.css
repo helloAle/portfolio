@@ -4,13 +4,6 @@
 .contact-inner { padding: 20px 0 40px; }
 .contact-tagline { color: var(--ink-muted); font-size: 1.1rem; }
 
-.big-link { /* e-mail em destaque */
-  font-family: "Ballet", cursive;
-  font-size: clamp(1.4rem, 3.5vw, 2.5rem);
-  color: var(--blue); text-decoration: none;
-  word-break: break-all; transition: color 0.2s;
-}
-.big-link:hover { color: var(--red); }
 
 .social-links a { /* Github / LinkedIn / Twitter */
   color: var(--ink-muted); text-decoration: none;
@@ -26,10 +19,10 @@
 .big-link { /* e-mail em destaque */
   font-family: "Schoolbell", cursive;
   font-size: clamp(0.93rem, 2.3vw, 1.67rem);
-  color: var(--blue); text-decoration: none;
+  color: #dee2e6; text-decoration: none;
   word-break: break-all; transition: color 0.2s;
 }
-.big-link:hover { color: var(--red); }
+.big-link:hover { color: #5aa9ff; }
 
 .social-links a { /* Github / LinkedIn / Twitter */
   color: var(--ink-muted); text-decoration: none;
@@ -67,7 +60,7 @@
   padding: 0.5rem 1rem;
 
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 20px;
 
   background: var(--paper-dark);
   color: var(--ink);
@@ -81,7 +74,7 @@
 }
 
 #message-mail button {
-  background: #5aa9ff;
+  background: #adb5bd;
 
   color: #11121a;
   font-weight: 600;
@@ -99,6 +92,7 @@
 
 #message-mail button:active {
   transform: scale(0.97);
+  background: #8cc4ff88;
 }
 
 .form-popup {

@@ -127,7 +127,23 @@ nav, section, .section-divider, footer {
   margin-left: 4px;
   animation: pipeBlink 1s step-end infinite;
   color: var(--ink);
+  transition: 0.5s;
 }
+.hero-typing:hover::after {
+  color: #33333369;
+  transition: 0.5s;
+}
+
+
+#hero-text{
+  transition: 0.5s;
+}
+#hero-text:hover{
+  transition: 0.5s;
+  color: #33333369;
+}
+
+
 
 .hero-subtitle { color: var(--blue); font-size: 1.3rem; min-height: 2em; }
 
