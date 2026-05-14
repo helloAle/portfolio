@@ -47,11 +47,30 @@ nav, section, .section-divider, footer {
 }
 
 /* ?? NAVBAR ?????????????????????????????????????????? */
+
 .alle-nav {
-  border-bottom: 1.5px solid var(--line);
-  background: rgba(26, 26, 26, 0.88) !important;
-  backdrop-filter: blur(6px);
-  padding: 16px 0;
+
+  position: fixed;
+
+  top: 10px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: calc(100% - 40px);
+  max-width: 1400px;
+
+  border: 1.5px solid var(--line);
+
+  border-radius: 40px;
+
+  background: rgba(26, 26, 26, 0.473) !important;
+
+  backdrop-filter: blur(10px);
+
+  padding: 10px 0;
+
+  z-index: 9999;
 }
 
 .alle-brand {
