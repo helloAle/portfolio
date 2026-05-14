@@ -41,6 +41,7 @@
 /* formulario */
 
 #message-mail {
+  transition: 0.4s;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -55,6 +56,7 @@
 #message-mail input,
 #message-mail textarea,
 #message-mail button {
+  transition: 0.4s;
   width: 100%;
 
   padding: 0.5rem 1rem;
@@ -66,6 +68,12 @@
   color: var(--ink);
 
   font: inherit;
+}
+#message-mail input:hover,
+#message-mail textarea:hover,
+#message-mail button:hover {
+  transition: 0.4s;
+  opacity: 50%;
 }
 
 #message-mail textarea {
