@@ -222,7 +222,7 @@ nav, section, .section-divider, footer {
 /* apagar isso aqui */
 /* ===================== MAINTENANCE POPUP ===================== */
 
-.maintenance-overlay {
+/* .maintenance-overlay {
 
   position: fixed;
   inset: 0;
@@ -332,5 +332,5 @@ nav, section, .section-divider, footer {
       scale(1);
 
   }
-}
+} */
 /* apagar acima */

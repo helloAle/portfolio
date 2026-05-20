@@ -88,33 +88,33 @@ if (form && popup) {
  // apagar isso:
     /* ===================== MAINTENANCE LOADING ===================== */
 
-    const maintenanceText =
-      document.getElementById("maintenance-text");
+    // const maintenanceText =
+    //   document.getElementById("maintenance-text");
 
-    const frames = [
-      "Website under maintenance",
-      "Website under maintenance.",
-      "Website under maintenance..",
-      "Website under maintenance...",
-    ];
+    // const frames = [
+    //   "Website under maintenance",
+    //   "Website under maintenance.",
+    //   "Website under maintenance..",
+    //   "Website under maintenance...",
+    // ];
 
-    let frameIndex = 0;
+    // let frameIndex = 0;
 
-    setInterval(() => {
+    // setInterval(() => {
 
-      maintenanceText.textContent =
-        frames[frameIndex];
+    //   maintenanceText.textContent =
+    //     frames[frameIndex];
 
-      frameIndex =
-        (frameIndex + 1) % frames.length;
+    //   frameIndex =
+    //     (frameIndex + 1) % frames.length;
 
-    }, 320);
-    function closePopup() {
+    // }, 320);
+    // function closePopup() {
 
-      document
-        .getElementById("maintenance-overlay")
-        .style.display = "none";
-    }
+    //   document
+    //     .getElementById("maintenance-overlay")
+    //     .style.display = "none";
+    // }
 // apagar
 
 
